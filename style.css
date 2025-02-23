@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +21,6 @@ body {
   margin-bottom: 1rem;
   color: white;
 }
-
 
 .accordion {
   width: 100%;
@@ -120,7 +118,6 @@ body {
   visibility: visible;
 }
 
-
 footer {
   position: fixed;
   left: 0;
@@ -140,7 +137,25 @@ section {
   width: 100%;
 }
 
-@media (width > 420px) {
+@media (max-width: 768px) {
+  .accordion {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .accordion li {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .accordion li:hover {
+    flex: 0 1 auto;
+    scale: 1;
+  }
+}
+
+@media (max-width: 420px) {
   section {
     align-items: center;
     padding-left: 0;
@@ -149,5 +164,17 @@ section {
 
   .links {
     gap: 20px;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+
+  .accordion li {
+    flex: 0 0 60px;
+  }
+
+  .accordion li:hover {
+    flex: 0 1 200px;
   }
 }
